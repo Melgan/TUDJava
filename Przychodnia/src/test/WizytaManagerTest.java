@@ -63,7 +63,7 @@ import service.*;
 		Lekarz Lekarz=new Lekarz (Imie_1, Nazwisko_1, nrSluzbowy_1);
 		LekarzManager.wyczyscLekarzow();
 		assertEquals(1, LekarzManager.dodajLekarza(Lekarz));		
-		WizytaManager.wyczyscSprzedazeLekarzu();
+		WizytaManager.wyczyscLekarzy();
 		assertEquals(1, WizytaManager.dodajWizyta(Pacjent, Lekarz ));
 	}
 	}

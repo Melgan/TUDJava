@@ -61,71 +61,72 @@ public Connection getConnection()
 {
 	return connection;
 }
-	public void wyczyscSprzedazeLekarzu()
+	public void wyczyscLekarzy()
 	{
 	try
 	{
 		usunWizyty.executeUpdate();
-		}catch (SQLException e)
+	}
+	catch (SQLException e)
 	{ 
 			e.printStackTrace();
-		}
+	}
 }
 
 	public int dodajWizyta(Pacjent pac, Lekarz lek)
 	{
-		int count = 0;
+		int licznik = 0;
 		try
 		{
 			dodajWizyta.setInt(1, pac.wezid_Pacjent());
 			dodajWizyta.setInt(2, lek.wezid_Lekarz());
 
-			count = dodajWizyta.executeUpdate();
+			licznik = dodajWizyta.executeUpdate();
 			
 		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
 		}
-		return count;
+		return licznik;
 	}
 	
 	public int edytujWizyte(Pacjent pac, Lekarz lek)
 	{
-		int count = 0;
+		int licznik = 0;
 		try
 		{
 			edytujWizyte.setInt(1, lek.wezid_Lekarz());
 			edytujWizyte.setInt(3, pac.wezid_Pacjent());
-			count = edytujWizyte.executeUpdate();
+			licznik = edytujWizyte.executeUpdate();
 			
 		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
 		}
-		return count;
+		return licznik;
 	}
 	public int usunWizyta(Wizyta Wizyta)
 	{
-		int count = 0;
+		int licznik = 0;
 		try
 		{
 			usunWizyta.setInt(1, Wizyta.getId_Wizyta());
 			
-			count = usunWizyta.executeUpdate();
+			licznik = usunWizyta.executeUpdate();
 			
 		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
 		}
-		return count;
+		return licznik;
 	}
 	
 	public List<Wizyta> Wizyta()
 	{
-		List<Wizyta> sprzedazeLekarzu = new ArrayList<Wizyta>();
+		List<Wizyta> Lekarzy = new ArrayList<Wizyta>();
 		
 		try
 		{
@@ -138,13 +139,13 @@ public Connection getConnection()
 				s.setId_Lekarz(wyn.getInt("id_Lekarz"));
 			
 				
-				sprzedazeLekarzu.add(s);
+				Lekarzy.add(s);
 			}
 		}
 		catch(SQLException e) 
 			{
 				e.printStackTrace();
 			}
-			return sprzedazeLekarzu;
+			return Lekarzy;
 		}
 	}
