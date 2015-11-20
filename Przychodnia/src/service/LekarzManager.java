@@ -50,7 +50,6 @@ public class LekarzManager
 			usunLekarzy=connection.prepareStatement("DELETE FROM Lekarz");
 			wezLekarzy=connection.prepareStatement("SELECT id_Lekarz, imie, nazwisko, nrSluzbowy FROM Lekarz");
 			zmienLekarza=connection.prepareStatement("UPDATE Lekarz set imie=?, nazwisko=?, nrSluzbowy=? WHERE id_Lekarz=?");
-				
 			
 	}
 		catch(SQLException e)

@@ -18,7 +18,7 @@ public class PacjentManager
 
 	private PreparedStatement dodajPacjenta;
 	private PreparedStatement usunPacjenta;
-	private PreparedStatement usunPacjenty;
+	private PreparedStatement usunPacjentow;
 	private PreparedStatement wezPacjenty;
 	private PreparedStatement zmienPacjenta;
 	
@@ -46,7 +46,7 @@ public class PacjentManager
 			
 			dodajPacjenta=connection.prepareStatement("INSERT INTO Pacjent(imie, nazwisko, pesel) VALUES (?, ?, ?)");
 			usunPacjenta=connection.prepareStatement("DELETE FROM Pacjent WHERE id_Pacjent=?");
-			usunPacjenty=connection.prepareStatement("DELETE FROM Pacjent");
+			usunPacjentow=connection.prepareStatement("DELETE FROM Pacjent");
 			wezPacjenty=connection.prepareStatement("SELECT id_Pacjent, imie, nazwisko, pesel FROM Pacjent");
 			zmienPacjenta=connection.prepareStatement("UPDATE Pacjent set imie=?, nazwisko=?, pesel=? WHERE id_Pacjent=?");
 			
@@ -65,7 +65,7 @@ public Connection wezConnection()
 	{
 	try
 		{
-			usunPacjenty.executeUpdate();
+			usunPacjentow.executeUpdate();
 		}
 		catch (SQLException e)
 		{ 
