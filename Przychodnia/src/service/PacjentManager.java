@@ -128,7 +128,7 @@ public Connection wezConnection()
 	
 	public List<Pacjent> wezPacjenty()
 	{
-		List<Pacjent> klienci=new ArrayList<Pacjent>();
+		List<Pacjent> pacjenci=new ArrayList<Pacjent>();
 		
 		try
 		{
@@ -141,12 +141,12 @@ public Connection wezConnection()
 				k.ustawImie(wyn.getString("imie"));
 				k.ustawNazwisko(wyn.getString("nazwisko"));
 				k.ustawpesel(wyn.getInt("pesel"));
-				klienci.add(k);
+				pacjenci.add(k);
 			}}
 		catch(SQLException e) 
 		{
 				e.printStackTrace();
 			}
-			return klienci;
+			return pacjenci;
 		}
 	}
