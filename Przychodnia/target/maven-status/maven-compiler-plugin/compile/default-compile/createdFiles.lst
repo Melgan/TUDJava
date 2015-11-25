@@ -1,0 +1,6 @@
+main\Lekarz.class
+service\PacjentManager.class
+main\Wizyta.class
+main\Pacjent.class
+service\WizytaManager.class
+service\LekarzManager.class
