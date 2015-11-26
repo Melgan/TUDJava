@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="test.LekarzManagerTest" time="0.055" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="test.LekarzManagerTest" time="0.063" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_65\jre\bin"/>
@@ -59,12 +59,11 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.stdout.encoding" value="cp852"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="test.LekarzManagerTest" name="sprawdzPolaczenie" time="0.01"/>
-  <testcase classname="test.LekarzManagerTest" name="sprawdzUsunLekarza" time="0.027"/>
-  <testcase classname="test.LekarzManagerTest" name="sprawdzDodajLekarza" time="0.013"/>
-  <testcase classname="test.LekarzManagerTest" name="sprawdzEdytujLekarza" time="0.005"/>
+  <testcase classname="test.LekarzManagerTest" name="sprawdzPolaczenie" time="0"/>
+  <testcase classname="test.LekarzManagerTest" name="sprawdzUsunLekarza" time="0.031"/>
+  <testcase classname="test.LekarzManagerTest" name="sprawdzDodajLekarza" time="0.016"/>
+  <testcase classname="test.LekarzManagerTest" name="sprawdzEdytujLekarza" time="0.016"/>
 </testsuite>
